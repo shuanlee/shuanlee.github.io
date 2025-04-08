@@ -38,16 +38,16 @@
 
     <div class="calculator">
         <h1>氨水1</h1>
-        <p>輸入高度</p>
-        <input type="number" id="inputValue" placeholder="輸入數值" step="any" oninput="calculate()">
+        <p>輸入高度(M)</p>
+        <input type="number" id="inputValue" placeholder="輸入數值，例:1.25" step="any" oninput="calculate()">
         <div class="result" id="result1">液位：-</div>
         <div class="result" id="result2">重量：-</div>
     </div>
 
     <div class="calculator">
         <h1>氨水2</h1>
-        <p>輸入高度</p>
-        <input type="number" id="inputValue2" placeholder="輸入數值" step="any" oninput="calculate2()">
+        <p>輸入高度(M)</p>
+        <input type="number" id="inputValue2" placeholder="輸入數值，例:1.25" step="any" oninput="calculate2()">
         <div class="result" id="result3">液位：-</div>
         <div class="result" id="result4">重量：-</div>
     </div>
@@ -55,23 +55,30 @@
     <div class="calculator">
         <h1>柴油</h1>
         <p>輸入液位</p>
-        <input type="number" id="inputValue3" placeholder="輸入數值" step="any" oninput="calculate3()">
+        <input type="number" id="inputValue3" placeholder="輸入數值，例:50" step="any" oninput="calculate3()">
         <div class="result" id="result6">重量：-</div>
     </div>
 
     <div class="calculator">
         <h1>Naoh</h1>
-        <p>輸入高度</p>
-        <input type="number" id="inputValue4" placeholder="輸入數值" step="any" oninput="calculate4()">
+        <p>輸入高度(M)</p>
+        <input type="number" id="inputValue4" placeholder="輸入數值，例:1.25" step="any" oninput="calculate4()">
         <div class="result" id="result7">液位：-</div>
         <div class="result" id="result8">重量：-</div>
     </div>
     <div class="calculator">
         <h1>Hcl</h1>
-        <p>輸入高度</p>
-        <input type="number" id="inputValue5" placeholder="輸入數值" step="any" oninput="calculate5()">
+        <p>輸入高度(M)</p>
+        <input type="number" id="inputValue5" placeholder="輸入數值，例:1.25" step="any" oninput="calculate5()">
         <div class="result" id="result9">液位：-</div>
         <div class="result" id="result10">重量：-</div>
+    </div>  
+
+    <div class="calculator">
+        <h1>清罐劑&脫氧劑</h1>
+        <p>輸入液位</p>
+        <input type="number" id="inputValue6" placeholder="輸入數值，例:50" step="any" oninput="calculate6()">
+        <div class="result" id="result11">需加藥水量：-</div>
     </div>
 
     <script>
@@ -90,8 +97,8 @@
 
             const formula2 = 0.25*3.14159*2.5*2.5*0.92* userInput;
 
-            document.getElementById('result1').textContent = `液位：${formula1.toFixed(1)}`;
-            document.getElementById('result2').textContent = `重量：${formula2.toFixed(2)}`;
+            document.getElementById('result1').textContent = `液位：${formula1.toFixed(1)}%`;
+            document.getElementById('result2').textContent = `重量：${formula2.toFixed(2)}T`;
         }
         function calculate2() {
            
@@ -109,8 +116,8 @@
             const formula4 = 0.25*3.14159*2.5*2.5*0.92* userInput2;
 
             
-            document.getElementById('result3').textContent = `液位：${formula3.toFixed(1)}`;
-            document.getElementById('result4').textContent = `重量：${formula4.toFixed(2)}`;
+            document.getElementById('result3').textContent = `液位：${formula3.toFixed(1)}%`;
+            document.getElementById('result4').textContent = `重量：${formula4.toFixed(2)}T`;
         }
         function calculate3() {
          
@@ -124,7 +131,7 @@
 
             const formula6 = 0.25*3.14159*3.15*3.15*14*0.84*userInput3/100;
 
-            document.getElementById('result6').textContent = `重量：${formula6.toFixed(2)}`;
+            document.getElementById('result6').textContent = `重量：${formula6.toFixed(2)}T`;
         }
         function calculate4() {
         
@@ -141,8 +148,8 @@
 
             const formula8 = 0.25*3.14159*1.5*1.5*1.4685* userInput4;
 
-            document.getElementById('result7').textContent = `液位：${formula7.toFixed(1)}`;
-            document.getElementById('result8').textContent = `重量：${formula8.toFixed(2)}`;
+            document.getElementById('result7').textContent = `液位：${formula7.toFixed(1)}%`;
+            document.getElementById('result8').textContent = `重量：${formula8.toFixed(2)}T`;
         }
         function calculate5() {
 
@@ -158,9 +165,24 @@
 
             const formula10 =0.25*3.14159*1.5*1.5*1.1593* userInput5;
 
-            document.getElementById('result9').textContent = `液位：${formula9.toFixed(1)}`;
-            document.getElementById('result10').textContent = `重量：${formula10.toFixed(2)}`;
+            document.getElementById('result9').textContent = `液位：${formula9.toFixed(1)}%`;
+            document.getElementById('result10').textContent = `重量：${formula10.toFixed(2)}T`;
         }
+
+        function calculate6() {
+
+            const userInput6 = parseFloat(document.getElementById('inputValue6').value);
+
+            if (isNaN(userInput6)) {
+                document.getElementById('result11').textContent = "液位：-";
+            return;
+            }
+
+            const formula11 = 100*(90-userInput6);
+
+
+            document.getElementById('result11').textContent = `須加藥水量：${formula11.toFixed(0)}ml`;
+}
     </script>
 
 </body>
