@@ -4,33 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>原物料計算</title>
-    <style>
+   <style>
+        :root {
+            --primary-color: #0066cc;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --border-radius: 12px;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 400vh;
-            flex-direction: column;
+            min-height: 100vh;
         }
+
         .calculator {
+            background: var(--card-bg);
+            padding: 30px 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            max-width: 500px;
+            width: 90%;
             text-align: center;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
         input {
-            padding: 10px;
-            margin: 10px;
+            width: 100%;
+            padding: 15px;
             font-size: 18px;
-            width: 200px;
-            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
         }
+
         .result {
             margin-top: 20px;
-            font-size: 22px;
-            font-weight: bold;
+            font-size: 20px;
+            color: #333;
+            word-wrap: break-word;
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            input {
+                font-size: 16px;
+                padding: 12px;
+            }
+
+            .result {
+                font-size: 18px;
+            }
         }
     </style>
 </head>
