@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>便當湯杯計算</title>
+  <script defer>
+    function calculate() {
+      const get = id => Number(document.getElementById(id).value) || 0;
+
+      const v1 = get("v1");
+      const v2 = get("v2");
+      const v3 = get("v3");
+      const v4 = get("v4");
+      const v5 = get("v5");
+      const v6 = get("v6");
+      const v7 = get("v7");
+      const v8 = get("v8");
+      const v9 = get("v9");
+      const v10 = get("v10");
+      const v11 = get("v11");
+      const v12 = get("v12");
+      const v13 = get("v13");
+      const v14 = get("v14");
+      const v15 = get("v15");
+      const v16 = get("v16");
+      const v17 = get("v17");
+
+      const a = v1 + v2 + v3 - v4;
+      const b = v6 - v7 - v8;
+      const c = v10 - v11;
+      const d = v13 - v14 - v15;
+      const e = v1 + v2 + v3 - v5;
+      const f = v6 - v7 - v9;
+      const g = v10 - v12;
+      const h = v13 - v14 - v16;
+      const i = a + b + c;
+      const j = e + f + g + h;
+
+      document.getElementById("out-a").textContent = a;
+      document.getElementById("out-b").textContent = b;
+      document.getElementById("out-c").textContent = c;
+      document.getElementById("out-d").textContent = d;
+      document.getElementById("out-e").textContent = e;
+      document.getElementById("out-f").textContent = f;
+      document.getElementById("out-g").textContent = g;
+      document.getElementById("out-h").textContent = h;
+      document.getElementById("out-i").textContent = i;
+      document.getElementById("out-j").textContent = j;
+    }
+  </script>
+  <style>
+    body { font-family: sans-serif; padding: 1rem; max-width: 600px; margin: auto; }
+    input { width: 100%; padding: 8px; margin: 4px 0 12px; box-sizing: border-box; }
+    .output { margin: 6px 0; font-weight: bold; }
+    @media (max-width: 600px) {
+      body { padding: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <h1>便當與湯杯計算</h1>
+
+  <div id="inputs">
+    <label>1. 班員乾 <input id="v1" type="number" oninput="calculate()"></label>
+    <label>2. 班員坤 <input id="v2" type="number" oninput="calculate()"></label>
+    <label>3. 講員 <input id="v3" type="number" oninput="calculate()"></label>
+    <label>4. 班員自帶便當盒 <input id="v4" type="number" oninput="calculate()"></label>
+    <label>5. 班員自帶湯杯 <input id="v5" type="number" oninput="calculate()"></label>
+    <label>6. 服務人員總數 <input id="v6" type="number" oninput="calculate()"></label>
+    <label>7. 林口服務 <input id="v7" type="number" oninput="calculate()"></label>
+    <label>8. 服務人員自帶便當盒 <input id="v8" type="number" oninput="calculate()"></label>
+    <label>9. 服務人員自帶湯杯 <input id="v9" type="number" oninput="calculate()"></label>
+    <label>10. 五樓總人數 <input id="v10" type="number" oninput="calculate()"></label>
+    <label>11. 五樓自帶便當盒 <input id="v11" type="number" oninput="calculate()"></label>
+    <label>12. 五樓自帶湯杯 <input id="v12" type="number" oninput="calculate()"></label>
+    <label>13. 三樓總人數 <input id="v13" type="number" oninput="calculate()"></label>
+    <label>14. 三樓自帶便當盒 <input id="v14" type="number" oninput="calculate()"></label>
+    <label>15. 三樓自帶湯杯 <input id="v15" type="number" oninput="calculate()"></label>
+    <label>16. 三樓林口 <input id="v16" type="number" oninput="calculate()"></label>
+    <label>17. 陳家共 <input id="v17" type="number" oninput="calculate()"></label>
+  </div>
+
+  <h2>輸出結果</h2>
+  <div class="output">a. 班員&講員便當盒共：<span id="out-a">0</span></div>
+  <div class="output">b. 服務人員便當盒共：<span id="out-b">0</span></div>
+  <div class="output">c. 五樓便當盒共：<span id="out-c">0</span></div>
+  <div class="output">d. 三樓麥當勞便當盒共：<span id="out-d">0</span></div>
+  <div class="output">e. 班員&講員湯杯共：<span id="out-e">0</span></div>
+  <div class="output">f. 服務人員湯杯共：<span id="out-f">0</span></div>
+  <div class="output">g. 五樓湯杯共：<span id="out-g">0</span></div>
+  <div class="output">h. 三樓湯杯共：<span id="out-h">0</span></div>
+  <div class="output">i. 便當盒總數：<span id="out-i">0</span></div>
+  <div class="output">j. 湯杯總數：<span id="out-j">0</span></div>
+</body>
+</html>
