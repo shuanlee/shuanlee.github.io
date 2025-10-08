@@ -37,6 +37,25 @@
       const i = a + b + c;
       const j = e + f + g + h;
       const k = v1 + v2 + v3 + v6 + v10 + v13 - v7 - v16 + v17;
+      const a1 = v1 + v2 + v3;
+      const a2 = v1;
+      const a3 = v2;
+      const a4 = v3;
+      const a5 = v4;
+      const a6 = v5;
+      const b1 = v6;
+      const b2 = v8;
+      const b3 = v9;
+      const d1 = v13;
+      const d2 = v14;
+      const d3 = v15;
+      const c1 = v10;
+      const c2 = v11;
+      const c3 = v12;
+      const e1 = v17 - v16;
+      const e2 = v16;
+      const e3 = v17;
+      const i1 =d;
 
       document.getElementById("out-a").textContent = a;
       document.getElementById("out-b").textContent = b;
@@ -49,6 +68,23 @@
       document.getElementById("out-i").textContent = i;
       document.getElementById("out-j").textContent = j;
       document.getElementById("out-k").textContent = k;
+      document.getElementById("out-a1").textContent = a1;
+      document.getElementById("out-a2").textContent = a2;
+      document.getElementById("out-a3").textContent = a3;
+      document.getElementById("out-a4").textContent = a4;
+      document.getElementById("out-a5").textContent = a5;
+      document.getElementById("out-a6").textContent = a6;
+      document.getElementById("out-b1").textContent = b1;
+      document.getElementById("out-b2").textContent = b2;
+      document.getElementById("out-b3").textContent = b3;
+      document.getElementById("out-d1").textContent = d1;
+      document.getElementById("out-c1").textContent = c1;
+      document.getElementById("out-c2").textContent = c2;
+      document.getElementById("out-c3").textContent = c3;
+      document.getElementById("out-e1").textContent = e1;
+      document.getElementById("out-e2").textContent = e2;
+      document.getElementById("out-e3").textContent = e3;
+      document.getElementById("out-i1").textContent = i1;
     }
   </script>
   <style>
@@ -84,16 +120,42 @@
   </div>
 
   <h2>輸出結果</h2>
+  <div class="output"> 班員&講員共：<span id="out-a1">0</span></div>
+  <div class="output"> 班員乾：<span id="out-a2">0</span></div>
+  <div class="output"> 班員坤：<span id="out-a3">0</span></div>
+  <div class="output"> 講員：<span id="out-a4">0</span></div>
   <div class="output"> 班員&講員便當盒共：<span id="out-a">0</span></div>
-  <div class="output"> 服務人員便當盒共：<span id="out-b">0</span></div>
-  <div class="output"> 五樓便當盒共：<span id="out-c">0</span></div>
   <div class="output"> 班員&講員湯杯共：<span id="out-e">0</span></div>
+  <div class="output"> 班員&講員便當盒自帶共：<span id="out-a5">0</span></div>
+  <div class="output"> 班員&講員湯杯自帶共：<span id="out-a6">0</span></div><br>
+
+  <div class="output"> 服務人員共：<span id="out-b1">0</span></div>
+  <div class="output"> 服務人員便當盒共：<span id="out-b">0</span></div>
   <div class="output"> 服務人員湯杯共：<span id="out-f">0</span></div>
-  <div class="output"> 五樓湯杯共：<span id="out-g">0</span></div>
+  <div class="output"> 服務人員便當盒自帶共：<span id="out-b2">0</span></div>
+  <div class="output"> 服務人員湯杯自帶共：<span id="out-b3">0</span></div><br>
+
+  <div class="output"> 三樓共：<span id="out-d1">0</span></div>
+  <div class="output"> 三樓麥當勞共：<span id="out-d">0</span></div>
   <div class="output"> 三樓湯杯共：<span id="out-h">0</span></div>
-  <div class="output"> 三樓麥當勞便當盒共：<span id="out-d">0</span></div>
+  <div class="output"> 三樓便當盒自帶共：<span id="out-d2">0</span></div>
+  <div class="output"> 三樓湯杯自帶共：<span id="out-d3">0</span></div><br>
+  
+  <div class="output"> 五樓共：<span id="out-c1">0</span></div>
+  <div class="output"> 五樓便當盒共：<span id="out-c">0</span></div>
+  <div class="output"> 五樓湯杯共：<span id="out-g">0</span></div>
+  <div class="output"> 三樓便當盒自帶共：<span id="out-c2">0</span></div>
+  <div class="output"> 三樓湯杯自帶共：<span id="out-c3">0</span></div><br>
+
+  <div class="output"> 陳家大共：<span id="out-e1">0</span></div>
+  <div class="output"> 陳家小共：<span id="out-e2">0</span></div>
+  <div class="output"> 陳家共：<span id="out-e3">0</span></div><br>
+ 
+ 
+  <div class="output"> 總人數：<span id="out-k">0</span></div>
   <div class="output"> 便當盒總數：<span id="out-i">0</span></div>
+  <div class="output"> 麥當勞總數：<span id="out-i1">0</span></div>
   <div class="output"> 湯杯總數：<span id="out-j">0</span></div>
-  <div class="output"> 煮飯總人數：<span id="out-k">0</span></div>
+ 
 </body>
 </html>
