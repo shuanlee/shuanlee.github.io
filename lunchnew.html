@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🍱 便當與湯杯計算器</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script defer>
+function calculate() {
+  const get = id => Number(document.getElementById(id).value) || 0;
+
+  const v1 = get("v1");
+  const v2 = get("v2");
+  const v3 = get("v3");
+  const v4 = get("v4");
+  const v5 = get("v5");
+  const v6 = get("v6");
+  const v7 = get("v7");
+  const v8 = get("v8");
+  const v9 = get("v9");
+  const v10 = get("v10");
+  const v11 = get("v11");
+  const v12 = get("v12");
+  const v13 = get("v13");
+  const v14 = get("v14");
+  const v15 = get("v15");
+  const v16 = get("v16");
+  const v17 = get("v17");
+
+  const a = v1 + v2 + v3 - v4;
+  const b = v6 - v7 - v8;
+  const c = v10 - v11;
+  const d = v13 - v14 - v16;
+  const e = v1 + v2 + v3 - v5;
+  const f = v6 - v7 - v9;
+  const g = v10 - v12;
+  const h = v13 - v15 - v16;
+  const i = a + b + c;
+  const j = e + f + g + h;
+  const k = v1 + v2 + v3 + v6 + v10 + v13 - v7 - v16 + v17; 
+  const a1 = v1 + v2 + v3;
+  const a2 = v1;
+  const a3 = v2;
+  const a4 = v3;
+  const a5 = v4;
+  const a6 = v5;
+  const b1 = v6;
+  const b2 = v8;
+  const b3 = v9;
+  const d1 = v13;
+  const d2 = v14;
+  const d3 = v15;
+  const c1 = v10;
+  const c2 = v11;
+  const c3 = v12;
+  const e1 = v17 - v16;
+  const e2 = v16;
+  const e3 = v17;
+  const i1 =d;
+
+  document.getElementById("out-a").textContent = a;
+  document.getElementById("out-b").textContent = b;
+  document.getElementById("out-c").textContent = c;
+  document.getElementById("out-d").textContent = d;
+  document.getElementById("out-e").textContent = e;
+  document.getElementById("out-f").textContent = f;
+  document.getElementById("out-g").textContent = g;
+  document.getElementById("out-h").textContent = h;
+  document.getElementById("out-i").textContent = i;
+  document.getElementById("out-j").textContent = j;
+  document.getElementById("out-k").textContent = k;
+  document.getElementById("out-a1").textContent = a1;
+  document.getElementById("out-a2").textContent = a2;
+  document.getElementById("out-a3").textContent = a3;
+  document.getElementById("out-a4").textContent = a4;
+  document.getElementById("out-a5").textContent = a5;
+  document.getElementById("out-a6").textContent = a6;
+  document.getElementById("out-b1").textContent = b1;
+  document.getElementById("out-b2").textContent = b2;
+  document.getElementById("out-b3").textContent = b3;
+  document.getElementById("out-d1").textContent = d1;
+  document.getElementById("out-d2").textContent = d2;
+  document.getElementById("out-d3").textContent = d3;
+  document.getElementById("out-c1").textContent = c1;
+  document.getElementById("out-c2").textContent = c2;
+  document.getElementById("out-c3").textContent = c3;
+  document.getElementById("out-e1").textContent = e1;
+  document.getElementById("out-e2").textContent = e2;
+  document.getElementById("out-e3").textContent = e3;
+  document.getElementById("out-i1").textContent = i1;
+}
+</script>
+</head>
+
+<body class="bg-gray-100 min-h-screen p-4">
+  <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl p-6 space-y-8">
+
+    <h1 class="text-2xl font-bold text-center">🍱 便當與湯杯計算器</h1>
+
+    <!-- 輸入 -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <script>
+        const labels = [
+          "班員乾","班員坤","講員","班員自帶便當盒","班員自帶湯杯",
+          "服務人員總數","林口服務","服務人員自帶便當盒","服務人員自帶湯杯",
+          "五樓總人數","五樓自帶便當盒","五樓自帶湯杯",
+          "三樓總人數","三樓自帶便當盒","三樓自帶湯杯",
+          "三樓林口","陳家共"
+        ];
+        document.write(labels.map((t,i)=>`
+          <div>
+            <label class="text-sm font-medium">${i+1}. ${t}</label>
+            <input id="v${i+1}" type="number" oninput="calculate()"
+              class="w-full mt-1 rounded-xl border px-3 py-2 focus:ring-2 focus:ring-blue-400 outline-none">
+          </div>
+        `).join(""));
+      </script>
+    </div>
+
+    <!-- 結果 -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+
+      <div class="bg-gray-50 p-5 rounded-xl">
+        <h2 class="font-bold mb-2">👥 班員 & 講員</h2>
+        <p>共：<b id="out-a1"></b>人</p>
+        <p>班員乾：<b id="out-a2"></b></p>
+        <p>班員坤：<b id="out-a3"></b></p>
+        <p>講員：<b id="out-a4"></b></p>
+        <p>便當準備：<b id="out-a"></b></p>
+        <p>湯杯準備：<b id="out-e"></b></p>
+        <p>便當自帶：<b id="out-a5"></b></p>
+        <p>湯杯自帶：<b id="out-a6"></b></p>
+      </div>
+
+      <div class="bg-gray-50 p-5 rounded-xl">
+        <h2 class="font-bold mb-2">🧑‍🍳 服務人員</h2>
+        <p>共：<b id="out-b1"></b>人</p>
+        <p>便當準備：<b id="out-b"></b></p>
+        <p>湯杯準備：<b id="out-f"></b></p>
+        <p>便當自帶：<b id="out-b2"></b></p>
+        <p>湯杯自帶：<b id="out-b3"></b></p>
+      </div>
+
+      <div class="bg-gray-50 p-5 rounded-xl">
+        <h2 class="font-bold mb-2">🏢 三樓</h2>
+        <p>共：<b id="out-d1"></b></p>
+        <p>麥當勞準備：<b id="out-d"></b></p>
+        <p>湯杯準備：<b id="out-h"></b></p>
+        <p>麥當勞自帶：<b id="out-d2"></b></p>
+        <p>湯杯自帶：<b id="out-d3"></b></p>
+      </div>
+
+      <div class="bg-gray-50 p-5 rounded-xl">
+        <h2 class="font-bold mb-2">🏢 五樓</h2>
+        <p>共：<b id="out-c1"></b></p>
+        <p>便當準備：<b id="out-c"></b></p>
+        <p>湯杯準備：<b id="out-g"></b></p>
+        <p>便當自帶：<b id="out-c2"></b></p>
+        <p>湯杯自帶：<b id="out-c3"></b></p>
+      </div>
+
+      <div class="bg-gray-50 p-5 rounded-xl">
+        <h2 class="font-bold mb-2">🏢 陳家</h2>
+
+        <p>大：<b id="out-e1"></b></p>
+        <p>小：<b id="out-e2"></b></p>
+        <p>共：<b id="out-e3"></b></p>
+      </div>
+
+    </div>
+   
+    <!-- 總計 -->
+    <div class="bg-blue-50 p-7 rounded-xl text-center space-y-1">
+      <p class="text-lg">👥 總人數：<b id="out-k" class="text-blue-700"></b></p>
+      <p class="text-lg">🍱 便當盒總數：<b id="out-i" class="text-green-700"></b></p>
+      <p class="text-lg">🍔 麥當勞總數：<b id="out-i1" class="text-orange-600"></b></p>
+      <p class="text-lg">🥣 湯杯總數：<b id="out-j" class="text-purple-700"></b></p>
+    </div>
+
+  </div>
+</body>
+</html>
